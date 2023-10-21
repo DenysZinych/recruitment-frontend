@@ -11,7 +11,7 @@ interface IInitialState {
 }
 
 const initialState: IInitialState = {
-  value: [{ id: "1", todoText: " Make this done asap", isResolved: false }],
+  value: [],
 };
 
 export const todoSlice = createSlice({
