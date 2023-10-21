@@ -37,16 +37,16 @@ export const todoSlice = createSlice({
       }
     },
     markTodoAsUnresolved: (state, action: PayloadAction<string>) => {
-      const unresovedTask = state.value.find(
+      const unresolvedTask = state.value.find(
         (todo) => todo.id === action.payload,
       );
-      if (unresovedTask) {
+      if (unresolvedTask) {
         state.value = [
-          unresovedTask,
+          unresolvedTask,
           ...state.value.filter((todo) => todo.id !== action.payload),
         ];
 
-        unresovedTask.isResolved = false;
+        unresolvedTask.isResolved = false;
       }
     },
   },

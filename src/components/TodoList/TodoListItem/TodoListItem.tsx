@@ -25,17 +25,10 @@ export const TodoListItem = ({ data }: ITodoListItemProps) => {
   };
 
   const checkboxToggle = () => {
-    if (isChecked) {
-      setChecked(false);
-      dispatch(markTodoAsUnresolved(id));
-      return;
-    }
-
-    if (!isChecked) {
-      setChecked(true);
-      dispatch(markTodoAsResolved(id));
-      return;
-    }
+    setChecked((prevChecked) => {
+      dispatch(prevChecked ? markTodoAsUnresolved(id) : markTodoAsResolved(id));
+      return !prevChecked;
+    });
   };
 
   return (
