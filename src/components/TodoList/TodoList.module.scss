@@ -1,0 +1,24 @@
+.todoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  padding: 0 16px;
+  margin: 30px 0;
+  gap: 16px;
+}
+
+.header {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.todoListContent {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 600px;
+  margin-top: 30px;
+  gap: 16px;
+}
